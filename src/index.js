@@ -159,7 +159,7 @@ const handleGraph =(()=>{
         </Select>
 
 
-{slide===false ?(<Button variant="contained"  onClick={handletable} >Graph</Button>):(<Button variant="contained"  onClick={handleGraph} >table</Button>)}
+{slide===false ?(<Button variant="contained"  onClick={handletable} >Table</Button>):(<Button variant="contained"  onClick={handleGraph} >Graphs</Button>)}
         
 
  
