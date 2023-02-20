@@ -166,7 +166,7 @@ const handleGraph =(()=>{
 
       </FormControl>
 
-      {slide ===true ?(<Bar data={stock} options={options} />):(  <Box sx={{ height: 400, width: '100%' }}>
+      {slide ===false ?(<Bar data={stock} options={options} />):(  <Box sx={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={rows}
         columns={columns}
