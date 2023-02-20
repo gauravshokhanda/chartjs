@@ -141,7 +141,7 @@ const handleGraph =(()=>{
 
   return (
     <div className="App">
-      <h1>ChartJS Sandbox</h1>
+      <h1>Comely Enterprises Task done by rahul</h1>
       <Box sx={{ml:20,mr:20}} >
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Stocks</InputLabel>
