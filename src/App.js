@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Bar } from "react-chartjs-2";
+
+import "./styles.css";
+
+const data = {
+  labels: ["Red", "Blue"],
+  datasets: [
+    {
+      label: "Success Count",
+      stack: "Stack 0",
+      data: [12, 19],
+      backgroundColor: "green"
+    },
+    {
+      label: "Failure Count",
+      stack: "Stack 0",
+      data: [6, 2],
+      backgroundColor: "red"
+    }
+  ]
+};
+
+const options = {
+  scales: {
+    xAxes: [
+      {
+        stacked: true
+      }
+    ],
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true
+        }
+      }
+    ]
+  }
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>ChartJS Sandbox</h1>
+      <Bar data={data} options={options} />
     </div>
   );
 }
 
-export default App;
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
